@@ -12,7 +12,9 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->resource('groups', GroupsController::class);
-    $router->resource('goods', GoodsController::class);
+    $router->resource('goods', GoodsController::class)->middleware('set_group');
+    $router->resource('sort-groups', SortGroupController::class)->middleware('set_group');
+
 
 
 });

@@ -19,6 +19,7 @@ class CreateGoods extends Migration
             $table->string('name');
             $table->string('size')->nullable();
             $table->double('price')->default(0);
+            $table->string('file')->nullable();
             $table->foreign('group_id')->on('groups')->references('id')->onDelete('cascade');
             $table->timestamps();
         });

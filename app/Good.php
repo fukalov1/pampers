@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Good extends Model
 {
-    //
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }

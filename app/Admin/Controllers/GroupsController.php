@@ -26,12 +26,19 @@ class GroupsController extends AdminController
     {
         $grid = new Grid(new Group);
 
-        $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
-        $grid->column('order', __('Order'));
-        $grid->column('show', __('Show'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+//        $grid->column('id', __('Id'));
+        $grid->column('name', __('Наименование'));
+        $grid->column('order', __('Номер'));
+        $grid->show('Показано')->display(function ($show){
+            return $show ? 'да' : 'нет';
+        });
+        $grid->goods('Товары')->display(function ($goods) {
+            $count = count($goods);
+            return "<a href='/admin/goods?set={$this->id}' title='перейти к товарам группы'><span class='label label-warning'>{$count}</span></a>";
+        });
+
+//        $grid->column('created_at', __('Created at'));
+//        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -66,8 +73,14 @@ class GroupsController extends AdminController
         $form = new Form(new Group);
 
         $form->text('name', __('Name'));
+        $form->text('link', __('Имя якоря'));
         $form->number('order', __('Order'));
         $form->switch('show', __('Show'))->default(1);
+//        $form->hasMany('sort_groups', function (Form\NestedForm $form) {
+//            $form->number('order', 'Номер показа группы');
+//            $form->text('domen','Домен');
+//        });
+
 
         return $form;
     }

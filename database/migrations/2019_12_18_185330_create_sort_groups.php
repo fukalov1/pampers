@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGroups extends Migration
+class CreateSortGroups extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateGroups extends Migration
      */
     public function up()
     {
-        Schema::create('groups', function (Blueprint $table) {
+        Schema::create('sort_groups', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('link')->nullable();
+            $table->bigInteger('group_id')->unsigned();
+            $table->string('domen');
             $table->integer('order')->default(0);
-            $table->boolean('show')->default(true);
+            $table->foreign('group_id')->on('groups')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateGroups extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('groups');
+        Schema::dropIfExists('sort_groups');
     }
 }

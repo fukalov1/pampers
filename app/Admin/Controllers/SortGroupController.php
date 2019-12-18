@@ -2,14 +2,14 @@
 
 namespace App\Admin\Controllers;
 
-use App\Good;
 use App\Group;
+use App\SortGroup;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class GoodsController extends AdminController
+class SortGroupController extends AdminController
 {
     /**
      * Title for current resource.
@@ -17,7 +17,7 @@ class GoodsController extends AdminController
      * @var string
      */
     protected $group='';
-    protected $title = 'Товары';
+    protected $title = 'Сортировка групп для домена';
 
     /**
      * Make a grid builder.
@@ -29,25 +29,18 @@ class GoodsController extends AdminController
 
         $this->getHeader();
 
-        $grid = new Grid(new Good);
-
-        $grid->model()->where('group_id', session('group_id'));
-
+        $grid = new Grid(new SortGroup);
         $grid->header(function ($query) {
             return "<div style='padding: 10px;'>Группа: <b>".$this->group."</b></div>";
         });
+        $grid->model()->where('group_id', session('group_id'));
 
-        $grid->column('name', __('Товар'));
-        $grid->column('size', __('Объем/кол-во'));
-        $grid->column('price', __('Цена'));
-        $grid->content('Фото')->display(function ($image) {
-            $link = '';
-            if ($this->file) {
-                $link = '<a href="javascript:removePhoto(\''.$this->id.'\')"  class="photo'.$this->id.'" title="удалить фото">удалить</a>
-                <img class="photo'.$this->id.'" src="/uploads/'.$this->file.'" style="width: 150px;padding:5px; ">';
-            }
-            return $link;
-        });
+//        $grid->column('id', __('Id'));
+//        $grid->column('group.name', __('Группа'));
+        $grid->column('domen', __('Domen'));
+        $grid->column('order', __('Order'));
+//        $grid->column('created_at', __('Created at'));
+//        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -60,13 +53,12 @@ class GoodsController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(Good::findOrFail($id));
+        $show = new Show(SortGroup::findOrFail($id));
 
         $show->field('id', __('Id'));
         $show->field('group_id', __('Group id'));
-        $show->field('name', __('Name'));
-        $show->field('size', __('Size'));
-        $show->field('price', __('Price'));
+        $show->field('domen', __('Domen'));
+        $show->field('order', __('Order'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -80,14 +72,11 @@ class GoodsController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Good);
+        $form = new Form(new SortGroup);
 
         $form->hidden('group_id')->value(session('group_id'));
-        $form->text('name', __('Наименование'));
-        $form->text('size', __('Объем/кол-во'));
-        $form->decimal('price', __('Цена'))->default(0);
-        $form->image('file', 'Фото');
-
+        $form->text('domen', __('Domen'));
+        $form->number('order', __('Order'))->default(0);
 
         return $form;
     }
