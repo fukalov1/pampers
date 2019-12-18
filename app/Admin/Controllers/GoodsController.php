@@ -15,7 +15,8 @@ class GoodsController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Good';
+    protected $group='';
+    protected $title = 'Товары';
 
     /**
      * Make a grid builder.
@@ -24,7 +25,14 @@ class GoodsController extends AdminController
      */
     protected function grid()
     {
+
+        $this->getHeader();
+
+
         $grid = new Grid(new Good);
+        $grid->header(function ($query) {
+            return "<div style='padding: 10px;'>Группа: <b>".$this->group."</b></div>";
+        });
 
         $grid->column('id', __('Id'));
         $grid->column('group_id', __('Group id'));
@@ -73,5 +81,14 @@ class GoodsController extends AdminController
         $form->decimal('price', __('Price'));
 
         return $form;
+    }
+
+    public function getHeader()
+    {
+        $group = Customer::find(session('customer_id'));
+//        dd($group->name);
+        $this->group = $group->name;
+        $this->title .= ' - '.$group->name;
+//            dd($this->title);
     }
 }
