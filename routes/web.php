@@ -13,3 +13,5 @@
 
 
 Route::get('/', 'MainController@index');
+
+Route::get('/f/{id}', 'MainController@index');
