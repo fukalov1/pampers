@@ -1,0 +1,547 @@
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-Light.woff') format('woff'), url('../fonts/GothamPro-Light.ttf')  format('truetype'), url('../fonts/GothamPro-Light.svg#GothamPro-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro.woff') format('woff'), url('../fonts/GothamPro.ttf')  format('truetype'), url('../fonts/GothamPro.svg#GothamPro') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-Medium.woff') format('woff'), url('../fonts/GothamPro-Medium.ttf')  format('truetype'), url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-Bold.woff') format('woff'), url('../fonts/GothamPro-Bold.ttf')  format('truetype'), url('../fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothamPro-Black.woff') format('woff'), url('../fonts/GothamPro-Black.ttf')  format('truetype'), url('../fonts/GothamPro-Black.svg#GothamPro-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+body{
+    margin:0;
+	padding: 0;
+	font-family: 'GothamPro', sans-serif;
+	font-size: 15px; 
+	font-weight: 400;
+	color: rgb(0, 0, 0);
+	line-height:1.4; 
+	min-width: 320px;
+}
+
+.container {
+    max-width: 1200px;
+	position: relative;
+}
+
+
+/* buttons */
+
+.button {
+	display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    border: none;
+	border-radius: 30px;
+	width:100%;
+	height: 58px;
+	font: 700 18px "GothamPro";
+	color: rgb(255, 255, 255);
+    text-align: center;
+	position: relative;
+	padding: 18px 10px 15px;
+}
+
+.button_green {
+	background-color: rgb(0, 177, 71);
+	box-shadow: 0px 0px 35px 0px rgb(1, 135, 54);
+}
+
+.button_green:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+	
+	
+}
+
+@media screen and (max-width: 1023px) {
+    
+		
+}
+
+@media screen and (max-width: 767px) {
+
+
+}
+
+@media screen and (max-width: 639px) {
+	
+
+}
+
+
+/*header*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+	padding: 22px 0;
+}
+
+.logo {
+    display: block;
+    background: url(../images/gilette-logo.png) no-repeat center;
+    background-size: contain;
+    width: 180px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.menu-line {
+	flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 21px;
+}
+
+.phone {
+    display: block;
+    font: 900 17px "GothamPro";
+    color: #006aa7;
+    position: relative;
+    padding-left: 33px;
+    position: absolute;
+    top: 83px;
+    left: 200px;
+	position: relative;
+    margin: 7px 0 0 -15px;
+    left: 0;
+    top: 0;
+}
+
+.phone_kz {
+    display: block;
+    font: 900 17px "GothamPro";
+    color: #006aa7;
+    position: relative;
+    padding-left: 33px;
+    position: absolute;
+    top: 83px;
+    left: 200px;
+	position: relative;
+    margin: 7px 0 0 -15px;
+    left: 0;
+    top: 0;
+}
+
+
+a.phone:hover {
+	color: #467cfa;
+	text-decoration: none;
+}
+
+.phone:before {
+    content: "";
+    background: url(../images/pbone.png) no-repeat center;
+	background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.navbar-expand-xl {
+	padding: 0;
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font: 700 15px/1 "GothamPro";
+    color: #242424;
+    text-transform: uppercase;
+    letter-spacing: .01px;
+    text-align: center;
+    padding: 0 .5rem;
+    border-left: 1px solid #006aa7;
+	position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link:first-child {
+	border: none;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+	color: #006aa7;
+}
+
+.navbar-nav .nav-link.active:before {
+    content: "";
+    box-sizing: border-box;
+    background: #00b047;
+    height: 2px;
+    width: 92%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -12px;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background: url(../images/burger.png) no-repeat center;
+    width: 45px;
+    height: 45px;
+}
+
+/*main-screen*/ 
+
+.main-screen {
+    background: url(../images/background-gilette.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 160px 0 100px;
+    text-align: center;
+	overflow: hidden;
+}
+
+.main-screen .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-screen__caption {
+	display: inline-block;
+	font: 900 52px/1 "GothamPro";
+	color: rgb(0, 19, 70);
+	text-transform: uppercase;
+}
+
+.main-screen h1 {
+    display: inline-block;
+    font: 900 52px/1 "GothamPro";
+    color: #001346;
+    letter-spacing: .001px;
+    margin: 5px 0 100px;
+}
+
+.main-screen__content {
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.main-screen__img {
+	background: url(../images/gilette.png) no-repeat center;
+	background-size: contain;
+	width: 700px;
+	height: 650px;
+}
+
+
+/*media*/ 
+
+@media screen and (max-width: 1921px) {
+		
+}
+
+@media screen and (max-width: 1365px) {
+	
+	
+}
+
+@media screen and (max-width: 1199px) {
+	header {
+		position: absolute;
+		background:none;
+	}
+	
+	.logo-tel {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.logo {
+		width: 150px;
+		height: 35px;
+	}
+	
+	.navbar-light .navbar-toggler {
+		display: none;
+	}
+	
+	.phone {
+		position: relative;
+		margin: 0;
+		top: 0;
+		right: 0;
+	}
+	
+	.main-screen {
+		margin-top: -50px;
+		padding-top: 170px;
+	}
+	
+	.main-screen__img {
+		width: 490px;
+		height: 490px;
+	}
+	
+	.main-screen__caption {
+		font-size: 50px;
+	}
+
+	.main-screen h1 {
+		font-size: 36px;
+	}
+
+	.main-screen h2  {
+		font-size: 26px;
+	}
+	
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+	.main-screen__content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.main-screen__caption {
+		font-size: 40px;
+	}
+
+	.main-screen h1 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	
+}
+
+@media screen and (max-width: 575px) {
+	
+	.logo {
+		width: 96px;
+		height: 52px;
+		margin-top: -20px;
+	}
+	
+	.phone {
+		font-weight: 700;
+		font-size: 14px;
+	}
+	
+	.phone:before {
+		width: 20px;
+		height: 20px;
+		left: 5px;
+		top: -2px;
+	}
+	
+	.navbar-light .navbar-toggler {
+		padding: 15px;
+	}
+	
+	.navbar-nav {
+		width: calc(100% + 30px);
+		margin-left: -15px;
+	}
+	
+	.main-screen {
+		position: relative;
+	}
+
+	.main-screen__img {
+		width: 300px;
+		height: 300px;
+	}
+	
+	.main-screen__caption {
+		font-size: 24px;
+		position: relative;
+	}
+
+	.main-screen h1 {
+		font-size: 18px;
+		margin: 0 0 15px;
+		position: relative;
+	}
+
+}
+
+.form-screen {
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	box-shadow: 2.828px 2.828px 21px 0px rgba(0, 0, 0, 0.19);
+	max-width: 470px;
+}
+
+.form-screen__wrapper {
+    background-color: rgb(255, 255, 255);
+    padding: 60px 25px;
+}
+
+.form-screen__caption {
+    font: 700 30px "GothamPro";
+    color: rgb(0, 106, 167);
+    text-align: center;
+    margin: 0 0 35px;
+}
+
+
+.wpcf7-form {
+	max-width: 900px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.wpcf7-form-control-wrap {
+	box-sizing: border-box;
+    display: block;	
+	padding: 5px 15px;
+	position: relative;
+	width: 100%;
+}
+
+.wpcf7-form-control-wrap_button {
+    margin-top: 30px;
+}
+
+.wpcf7-form-control {
+    display: block;
+    box-sizing: border-box;
+    background-color: #fff;
+	border: 1px solid rgb(201, 201, 201);
+	border-radius: 4px;
+	box-shadow: inset 2.121px 2.121px 3px 0px rgba(171, 178, 183, 0.23);
+	height: 43px;
+    width: 100%;
+    outline: 0;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.wpcf7-form-control:not([type=submit]):focus{
+	border: 1px solid #068884;
+}
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+    
+}
+
+@media screen and (max-width: 1023px) {
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+	.form-screen {
+		max-width: none;
+		margin: 0 15px;
+	}
+	
+	.wpcf7-form-control-wrap {
+		width: 50%;
+	}
+	
+	.button_yellow {
+		margin-top: -19px;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+    .wpcf7-form-control-wrap {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.form-screen {
+		margin-top: -130px;
+	}
+	
+	.form-screen__wrapper {
+		background-color: rgb(255, 255, 255);
+		padding: 30px 15px;
+	}
+	
+	.form-screen__caption {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+}
+
+.err {
+	display: none;
+}
+
+.thanks-icon {
+	background: url(../images/ok.png) no-repeat center;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+	margin: 50px auto 20px;
+}
+
+.thanks-caption {
+    font: 900 42px/1 "GothamPro";
+    color: #887c09;
+    margin: 0 0 15px;
+	text-align: center;
+}
+
+.thanks-small-caption {
+	font: 900 32px/1 "GothamPro";
+    color: #f3df1a;
+	text-align: center;
+}

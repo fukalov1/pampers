@@ -1,0 +1,16 @@
+[18-Dec-2019 08:49:42 Europe/Moscow] PHP Notice:  Undefined index: name in /home/prodvi02/gillette-opt/p/form.php on line 15
+[18-Dec-2019 08:49:42 Europe/Moscow] PHP Notice:  Undefined index: phone in /home/prodvi02/gillette-opt/p/form.php on line 16
+[18-Dec-2019 08:49:42 Europe/Moscow] PHP Notice:  Undefined index: mail in /home/prodvi02/gillette-opt/p/form.php on line 17
+[18-Dec-2019 08:49:42 Europe/Moscow] PHP Notice:  Undefined index: city in /home/prodvi02/gillette-opt/p/form.php on line 18
+[19-Dec-2019 19:26:40 UTC] PHP Notice:  Undefined index: name in /home/prodvi02/gillette-opt/public/p/form.php on line 15
+[19-Dec-2019 19:26:40 UTC] PHP Notice:  Undefined index: phone in /home/prodvi02/gillette-opt/public/p/form.php on line 16
+[19-Dec-2019 19:26:40 UTC] PHP Notice:  Undefined index: mail in /home/prodvi02/gillette-opt/public/p/form.php on line 17
+[19-Dec-2019 19:26:40 UTC] PHP Notice:  Undefined index: city in /home/prodvi02/gillette-opt/public/p/form.php on line 18
+[19-Dec-2019 19:28:40 UTC] PHP Notice:  Undefined index: name in /home/prodvi02/gillette-opt/public/p/form_msk.php on line 15
+[19-Dec-2019 19:28:40 UTC] PHP Notice:  Undefined index: phone in /home/prodvi02/gillette-opt/public/p/form_msk.php on line 16
+[19-Dec-2019 19:28:40 UTC] PHP Notice:  Undefined index: mail in /home/prodvi02/gillette-opt/public/p/form_msk.php on line 17
+[19-Dec-2019 19:28:40 UTC] PHP Notice:  Undefined index: city in /home/prodvi02/gillette-opt/public/p/form_msk.php on line 18
+[19-Dec-2019 19:43:43 UTC] PHP Notice:  Undefined index: name in /home/prodvi02/gillette-opt/public/p/form_kz.php on line 15
+[19-Dec-2019 19:43:43 UTC] PHP Notice:  Undefined index: phone in /home/prodvi02/gillette-opt/public/p/form_kz.php on line 16
+[19-Dec-2019 19:43:43 UTC] PHP Notice:  Undefined index: mail in /home/prodvi02/gillette-opt/public/p/form_kz.php on line 17
+[19-Dec-2019 19:43:43 UTC] PHP Notice:  Undefined index: city in /home/prodvi02/gillette-opt/public/p/form_kz.php on line 18
